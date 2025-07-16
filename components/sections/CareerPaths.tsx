@@ -189,7 +189,7 @@ const CareerPaths = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     
                     {/* Floating Stats */}
-                    <div className="absolute bottom-6 left-6 right-6">
+                    {/* <div className="absolute bottom-6 left-6 right-6">
                       <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                         <div className="grid grid-cols-2 gap-4 text-center">
                           <div>
@@ -208,7 +208,7 @@ const CareerPaths = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

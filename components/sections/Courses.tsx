@@ -103,11 +103,11 @@ const Courses = () => {
                     ))}
                   </ul>
                 </div>
-
+{/* 
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-3xl font-bold text-gray-900">{course.price}</div>
                   <div className="text-sm text-gray-500">One-time payment</div>
-                </div>
+                </div> */}
 
                 <button className="btn-primary w-full group">
                   Enroll Now

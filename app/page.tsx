@@ -21,8 +21,8 @@ export default function Home() {
       <LearningFormats />
       <CareerPaths />
       <EmailCapture />
-      <Motivation />
-      <Testimonials />
+      {/* <Motivation /> */}
+      {/* <Testimonials /> */}
       <Blog />
       <CTA />
       <Footer />

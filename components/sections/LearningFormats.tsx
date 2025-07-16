@@ -110,10 +110,10 @@ const LearningFormats = () => {
                   <span className="text-sm text-gray-500">Duration</span>
                   <span className="text-sm font-semibold text-gray-900">{format.duration}</span>
                 </div>
-                <div className="flex justify-between items-center">
+                {/* <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-500">Price</span>
                   <span className="text-lg font-bold text-[#0041c9]">{format.price}</span>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
