@@ -36,7 +36,74 @@ const Courses = () => {
       features: ['SEO & SEM', 'Social Media', 'Google Analytics', 'Content Strategy'],
       price: '$499',
       popular: false
-    }
+    },
+    {
+      icon: Code,
+      title: 'Java Programming',
+      description: 'Build robust applications and backend systems with Java, Spring Boot, and modern frameworks.',
+      duration: '4 Months',
+      students: '2,200+',
+      rating: 4.8,
+      features: ['Java Basics', 'OOP', 'Spring Boot', 'REST APIs'],
+      price: '$599',
+      popular: false
+    },
+    {
+      icon: Code,
+      title: 'Python Programming',
+      description: 'Learn Python for web, data science, automation, and AI with hands-on projects.',
+      duration: '4 Months',
+      students: '3,000+',
+      rating: 4.9,
+      features: ['Python Basics', 'Data Science', 'Flask & Django', 'Automation'],
+      price: '$599',
+      popular: false
+    },
+    {
+      icon: Code,
+      title: 'Selenium Automation',
+      description: 'Automate web testing using Selenium, Python, and best QA practices.',
+      duration: '2 Months',
+      students: '1,200+',
+      rating: 4.7,
+      features: ['Selenium WebDriver', 'Python/Java', 'Test Automation', 'CI/CD Integration'],
+      price: '$399',
+      popular: false
+    },
+    {
+      icon: Code,
+      title: 'Software Testing',
+      description: 'Master manual and automated testing, QA methodologies, and tools.',
+      duration: '3 Months',
+      students: '1,800+',
+      rating: 4.8,
+      features: ['Manual Testing', 'Automation', 'JIRA', 'Bug Tracking'],
+      price: '$499',
+      popular: false
+    },
+    {
+      icon: Code,
+      title: 'Cloud Computing',
+      description: 'Get hands-on with AWS, Azure, and Google Cloud for modern cloud solutions.',
+      duration: '4 Months',
+      students: '2,500+',
+      rating: 4.9,
+      features: ['AWS', 'Azure', 'GCP', 'Cloud Architecture'],
+      price: '$699',
+      popular: false
+    },
+    {
+      icon: Code,
+      title: 'DevOps',
+      description: 'Learn CI/CD, Docker, Kubernetes, and modern DevOps practices for scalable deployments.',
+      duration: '3 Months',
+      students: '2,000+',
+      rating: 4.8,
+      features: ['CI/CD', 'Docker', 'Kubernetes', 'Monitoring'],
+      price: '$599',
+      popular: false
+    },
+    // Add more trending courses as needed
   ];
 
   return (
@@ -109,10 +176,10 @@ const Courses = () => {
                   <div className="text-sm text-gray-500">One-time payment</div>
                 </div> */}
 
-                <button className="btn-primary w-full group">
+                <a href="#contact-form" className="btn-primary w-full group">
                   Enroll Now
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -120,9 +187,9 @@ const Courses = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Need help choosing the right course?</p>
-          <button className="btn-secondary">
+          <a href="#contact-form" className="btn-secondary">
             Get Free Consultation
-          </button>
+          </a>
         </div>
       </div>
     </section>

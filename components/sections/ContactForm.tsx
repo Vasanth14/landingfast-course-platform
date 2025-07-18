@@ -3,14 +3,21 @@
 import React, { useState } from 'react';
 import { Mail, User, BookOpen, MessageCircle, CheckCircle, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select';
 
 const courseOptions = [
-  'UI/UX Course',
-  'Fullstack Course',
-  'Digital Marketing Course',
-  'Data Science Course',
-  'Cloud Computing Course',
-  'Cybersecurity Course',
+  'Fullstack Development',
+  'UI/UX Design',
+  'Digital Marketing',
+  'Java Programming',
+  'Python Programming',
+  'Selenium Automation',
+  'Software Testing',
+  'Cloud Computing',
+  'DevOps',
+  'Data Science',
+  'Cybersecurity',
+  // Add more trending courses as needed
 ];
 
 const ContactForm = () => {
@@ -24,7 +31,7 @@ const ContactForm = () => {
     message: '',
     checkboxes: '',
   });
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [selectedCourse, setSelectedCourse] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error' | 'loading'>('idle');
   const [error, setError] = useState<string | null>(null);
 
@@ -32,15 +39,9 @@ const ContactForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleCheckboxChange = (option: string) => {
-    let updatedOptions;
-    if (selectedOptions.includes(option)) {
-      updatedOptions = selectedOptions.filter((item) => item !== option);
-    } else {
-      updatedOptions = [...selectedOptions, option];
-    }
-    setSelectedOptions(updatedOptions);
-    setForm({ ...form, checkboxes: updatedOptions.join(', ') });
+  const handleSelectChange = (value: string) => {
+    setSelectedCourse(value);
+    setForm({ ...form, checkboxes: value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -72,7 +73,7 @@ const ContactForm = () => {
       if (response.ok) {
         setStatus('success');
         setForm({ firstname: '', lastname: '', email: '', phone: '', subject: '', message: '', checkboxes: '' });
-        setSelectedOptions([]);
+        setSelectedCourse('');
         toast({ title: 'Message Sent', description: 'Your message was sent successfully!' });
       } else {
         setStatus('error');
@@ -175,21 +176,18 @@ const ContactForm = () => {
               required
             />
           </div>
-          <div>
-            <label className="block text-gray-900 font-semibold mb-2">Interested Courses</label>
-            <div className="flex flex-wrap gap-3">
-              {courseOptions.map((option) => (
-                <label key={option} className="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full cursor-pointer select-none border border-gray-200 hover:bg-gray-200 transition-all">
-                  <input
-                    type="checkbox"
-                    checked={selectedOptions.includes(option)}
-                    onChange={() => handleCheckboxChange(option)}
-                    className="accent-[#0041c9]"
-                  />
-                  <span className="text-sm font-medium">{option}</span>
-                </label>
-              ))}
-            </div>
+          <div className="relative">
+            <BookOpen className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
+            <Select value={selectedCourse} onValueChange={handleSelectChange} required>
+              <SelectTrigger className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0041c9] text-gray-900 placeholder-gray-500 shadow-md z-20">
+                <SelectValue placeholder="Select a course" />
+              </SelectTrigger>
+              <SelectContent className="bg-white z-50 shadow-xl border border-gray-200">
+                {courseOptions.map((option) => (
+                  <SelectItem key={option} value={option}>{option}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
           <div className="relative">
             <MessageCircle className="absolute left-4 top-4 h-5 w-5 text-gray-400" />

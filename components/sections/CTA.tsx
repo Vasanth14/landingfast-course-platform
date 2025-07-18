@@ -48,13 +48,13 @@ const CTA = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-white text-[#0041c9] hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group" onClick={scrollToContact}>
+              <a href="#contact-form" className="bg-white text-[#0041c9] hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group block text-center">
                 Book Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-[#0041c9] font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105" onClick={scrollToContact}>
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1 inline" />
+              </a>
+              <a href="#contact-form" className="border-2 border-white text-white hover:bg-white hover:text-[#0041c9] font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 block text-center">
                 View All Courses
-              </button>
+              </a>
             </div>
 
             <div className="mt-8 pt-8 border-t border-white/20">
