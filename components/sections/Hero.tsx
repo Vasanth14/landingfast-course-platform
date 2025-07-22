@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ArrowRight, Play, Users, Award, Clock, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +12,7 @@ const Hero = () => {
   }, []);
 
   const stats = [
-    { icon: Users, label: 'Students Trained', value: '10,000+' },
+    { icon: Users, label: 'Students Trained', value: '100+' },
     { icon: Award, label: 'Success Rate', value: '95%' },
     { icon: Clock, label: 'Avg. Job Time', value: '3 Months' },
   ];
@@ -96,7 +97,7 @@ const Hero = () => {
           <div className={`transition-all duration-1000 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0041c9] to-[#1a57d6] text-white px-6 py-3 rounded-full mb-8 shadow-lg">
               <Sparkles className="h-5 w-5" />
-              <span className="font-semibold">🎉 Join 10,000+ Successful Graduates</span>
+              <span className="font-semibold">🎉 Join 100+ Successful Graduates</span>
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             </div>
           </div>
@@ -122,14 +123,14 @@ const Hero = () => {
 
           <div className={`transition-all duration-1000 ${isVisible ? 'animate-fadeInUp animate-delay-400' : 'opacity-0'}`}>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-              <button className="btn-primary group">
+              <Link href='#contact-form' className="btn-primary group flex items-center">
                 Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </button>
-              <button className="btn-secondary group">
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1 float-right" />
+              </Link>
+              {/* <button className="btn-secondary group">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
-              </button>
+              </button> */}
             </div>
           </div>
 

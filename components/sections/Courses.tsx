@@ -126,10 +126,9 @@ const Courses = () => {
                   Most Popular
                 </div>
               )}
-              
-              <div className={`glass-effect rounded-2xl p-8 card-hover h-full ${
-                course.popular ? 'ring-2 ring-[#0041c9] ring-opacity-50' : ''
-              }`}>
+
+              <div className={`glass-effect rounded-2xl p-8 card-hover h-full ${course.popular ? 'ring-2 ring-[#0041c9] ring-opacity-50' : ''
+                }`}>
                 <div className="flex items-center justify-center mb-6">
                   <div className="bg-gradient-to-r from-[#0041c9] to-[#1a57d6] p-4 rounded-xl">
                     <course.icon className="h-8 w-8 text-white" />
@@ -170,16 +169,17 @@ const Courses = () => {
                     ))}
                   </ul>
                 </div>
-{/* 
+                {/* 
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-3xl font-bold text-gray-900">{course.price}</div>
                   <div className="text-sm text-gray-500">One-time payment</div>
                 </div> */}
 
-                <a href="#contact-form" className="btn-primary w-full group">
-                  Enroll Now
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
+                <div>
+                  <a href="#contact-form" className="btn-primary w-full block text-center">
+                    Enroll Now
+                  </a>
+                </div>
               </div>
             </div>
           ))}

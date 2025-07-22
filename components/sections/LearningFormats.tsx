@@ -4,15 +4,15 @@ import { Monitor, Users, Video, MapPin, Clock, Calendar, Globe, Coffee } from 'l
 
 const LearningFormats = () => {
   const formats = [
-    {
-      icon: Monitor,
-      title: 'Online Self-Paced',
-      description: 'Learn at your own pace with lifetime access to course materials',
-      features: ['24/7 Access', 'Downloadable Resources', 'Progress Tracking', 'Community Support'],
-      price: 'From Rs.9999',
-      duration: 'Lifetime Access',
-      color: 'from-blue-500 to-blue-600'
-    },
+    // {
+    //   icon: Monitor,
+    //   title: 'Online Self-Paced',
+    //   description: 'Learn at your own pace with lifetime access to course materials',
+    //   features: ['24/7 Access', 'Downloadable Resources', 'Progress Tracking', 'Community Support'],
+    //   price: 'From Rs.9999',
+    //   duration: 'Lifetime Access',
+    //   color: 'from-blue-500 to-blue-600'
+    // },
     {
       icon: Video,
       title: 'Live Virtual Classes',
@@ -77,7 +77,7 @@ const LearningFormats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {formats.map((format, index) => (
             <div key={index} className="glass-effect rounded-2xl p-6 card-hover">
               <div className="flex items-center justify-center mb-4">

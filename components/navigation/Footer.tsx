@@ -61,15 +61,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-[#0041c9]" />
-                  <span className="text-gray-300">hello@landingfast.com</span>
+                  <span className="text-gray-300">guide@landingfast.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-[#0041c9]" />
-                  <span className="text-gray-300">+1 (555) 123-4567</span>
+                  <span className="text-gray-300">+91 9940722428</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-[#0041c9]" />
-                  <span className="text-gray-300">San Francisco, CA</span>
+                  <span className="text-gray-300">Madurai, Tamil Nadu</span>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-300">
-              © 2024 LandingFast. All rights reserved.
+              © 2025 LandingFast. All rights reserved.
             </div>
             <div className="flex items-center space-x-6">
               {socialLinks.map((social) => (
